@@ -55,10 +55,16 @@ def run(songs)
     case user_input
       when "list"
         list(songs)
+        puts "Please enter a command:"
+        user_input = gets.strip 
       when "play"
         play(songs)
+        puts "Please enter a command:"
+        user_input = gets.strip 
       when "help"
         help
+        puts "Please enter a command:"
+        user_input = gets.strip 
       when "exit"
         exit_jukebox
         break
