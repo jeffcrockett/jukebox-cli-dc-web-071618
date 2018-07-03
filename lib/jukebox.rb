@@ -68,8 +68,8 @@ def run(songs)
         puts "Please enter a command:"
         user_input = gets.strip 
       when "exit"
-        exit_jukebox
         break
     end
+    exit_jukebox
   end
 end
