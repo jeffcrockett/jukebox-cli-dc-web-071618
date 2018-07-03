@@ -31,8 +31,7 @@ def play(songs)
   user_response = gets.chomp
   if songs.include?(user_response)
     puts "Playing #{user_response}"
-  end
-  if (1..songs.length).to_a.include?(user_response.to_i)
+  elsif (1..songs.length).to_a.include?(user_response.to_i)
     puts "Playing #{songs[user_response.to_i - 1]}"
   end
   else
