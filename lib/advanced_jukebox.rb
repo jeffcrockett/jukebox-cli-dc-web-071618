@@ -43,7 +43,7 @@ def play(my_songs)
   user_response = gets.chomp
   if my_songs.keys.include?(user_response) 
     puts "Playing #{user_response}"
-    system 'open /home/jeffcrockett/jukebox-cli/audio/'
+    system "open /home/jeffcrockett/jukebox-cli/audio/0#{my_songs.keys.index(user_response)+1}.mp3"
   else
     puts "Invalid input, please try again"
   end
@@ -51,7 +51,7 @@ def play(my_songs)
 end
 
 def exit_jukebox
-  #this method is the same as in jukebox.rb
+  puts "Goodbye"
 end
 
 def run(my_songs)
