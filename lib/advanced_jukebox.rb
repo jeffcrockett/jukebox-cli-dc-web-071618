@@ -62,11 +62,11 @@ def run(my_songs)
   until user_input == "exit"
     case user_input
       when "list"
-        list(songs)
+        list(my_songs)
         puts "Please enter a command:"
         user_input = gets.strip 
       when "play"
-        play(songs)
+        play(my_songs)
         puts "Please enter a command:"
         user_input = gets.strip 
       when "help"
