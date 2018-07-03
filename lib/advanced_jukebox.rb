@@ -56,4 +56,26 @@ end
 
 def run(my_songs)
   #this method is the same as in jukebox.rb
+  help 
+  puts "Please enter a command:"
+  user_input = gets.strip 
+  until user_input == "exit"
+    case user_input
+      when "list"
+        list(songs)
+        puts "Please enter a command:"
+        user_input = gets.strip 
+      when "play"
+        play(songs)
+        puts "Please enter a command:"
+        user_input = gets.strip 
+      when "help"
+        help
+        puts "Please enter a command:"
+        user_input = gets.strip 
+      when "exit"
+        exit_jukebox
+        break
+    end
+  end
 end
